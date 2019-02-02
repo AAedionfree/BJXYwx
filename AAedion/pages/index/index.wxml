@@ -1,0 +1,17 @@
+<!--index.wxml-->
+<view class="top">
+  <view class="motd">
+    <view class="motdu">{{userinfo.Name}} 同学</view>
+    <view class="motd2">{{motd_2}}</view>
+  </view>
+</view>
+
+<!-- 头像 -->
+<image class="userinfo-avatar" src="{{userinfo.WXlogo}}" mode="cover"></image>
+
+<scroll-view scroll-y="true" lower-threshold="20" bindscrolltolower="s2l">
+  <view class="clickbox" wx:for="{{clicklist}}" wx:for-item="clicklist" bindtap="{{clicklist.tap}}">
+    <image class="box_icon" src="{{clicklist.image}}" mode="cover"></image>
+    <view class="clickword">{{clicklist.content}}</view>
+  </view>
+</scroll-view>

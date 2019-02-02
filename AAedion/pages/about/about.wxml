@@ -1,0 +1,13 @@
+<!--pages/about/about.wxml-->
+<view class="top">鸣谢</view>
+<view class="motd">开发团队</view>
+
+<view class='main' wx:for="{{list}}" wx:for-item="list">
+  <view class='class'>{{list.cls}}</view>
+  <view class="main2">
+    <view class='mem' wx:for="{{list.member}}" wx:for-item="member">{{member}}</view>
+  </view>
+</view>
+<view class="motd2">感谢参与内测的所有同学</view>
+<view class="motd2">北京学院项目组 2018</view>
+<view class="motd2">欢迎更多同学加入后续开发！</view>

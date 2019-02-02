@@ -1,0 +1,29 @@
+<!--index.wxml-->
+<view class="top">
+  <view class="motd">
+    <text>  设置</text>
+  </view>
+</view>
+<scroll-view scroll-y="true">
+  <view class="clickbox" wx:for="{{clicklist}}" wx:for-item="clicklist" bindtap="{{clicklist.tap}}">
+    <image class="box_icon2" src="{{clicklist.image}}" mode="cover"></image>
+    <view class="clickword">{{clicklist.content}}</view>
+  </view>
+</scroll-view>
+
+<!--弹窗-->
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="modal-dialog" wx:if="{{showModal}}">
+  <view class="modal-title">修改密码</view>
+  <view class="modal-content">
+    <view class="modal-input">
+      <input value="{{cpw_origin}}" placeholder-class="input-holder" type="password" maxlength="12" bindinput="inputPreviousPassword" class="input" placeholder="原来的密码"></input>
+      <input value="{{cpw_new}}" placeholder-class="input-holder" type="password" maxlength="12" bindinput="inputNewPassword" class="input" placeholder="新密码"></input>
+      <input value="{{cpw_confirm}}" placeholder-class="input-holder" type="password" maxlength="12" bindinput="inputNewPasswordAgain" class="input" placeholder="重复新密码"></input>
+    </view>
+  </view>
+  <view class="modal-footer">
+    <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+    <view class="btn-confirm" bindtap="onConfirm" data-status="confirm" catchtap="change">确定</view>
+  </view>
+</view>

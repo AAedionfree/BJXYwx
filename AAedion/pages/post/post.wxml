@@ -1,0 +1,37 @@
+<view class="shuzhi">
+
+    <scroll-view scroll-y="true" lower-threshold="20">
+      <view class="top-white"></view>
+
+      <picker style="height:80%；"mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+        <view class="contentbox"> 
+          <view class="contentboxi">{{multiArray[0][multiIndex[0]]}}</view> 
+          <view class="contentboxi">> {{multiArray[1][multiIndex[1]]}}</view>
+          <view class="contentboxi">> {{multiArray[2][multiIndex[2]]}}</view>
+          <view class="contentboxi">> {{multiArray[3][multiIndex[3]]}}</view>      
+          <view class="contentboxi">> {{multiArray[4][multiIndex[4]]}}</view>      
+        </view> 
+      </picker>
+
+      <view wx:if="{{multiIndex[0]==1&&multiIndex[1]==0||multiIndex[0]==0&&multiIndex[1]==1&&multiIndex[2]==2&&multiIndex[3]==5||multiIndex[0]==2||multiIndex[0]==0&&multiIndex[1]==0&&multiIndex[2]==5}}" class="imgpart">
+        <view class="shangchuantupian" bindtap='up_image'>
+          <view class="shangchuantupian1">上传图片</view>
+          <view class="shangchuantupian2">大小限制在5M内，格式为BMP/JPG/PNG</view>
+        </view>
+        <view class="imglist" wx:for="{{imagelist}}" wx:for-item="imagelist">
+          <image class="imageshow" src="{{imagelist}}" mode="widthFix" bindtap='preview'></image>
+        </view>        
+      </view>
+
+      <view class="input_comment">
+        <input class="comment" value="{{comment}}" placeholder="输入备注" bindinput='CommentInput' type="text" />
+      </view>
+      <view class="bottom-white"></view>
+    </scroll-view>
+
+  <view class="ground">
+    <view class="fenshu">分数:{{score}}</view>
+    <button class="queding" bindtap='send'>确定</button>
+  </view>
+  <view class="contentbox2">当前选择:</view>   
+</view>

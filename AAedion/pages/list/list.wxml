@@ -1,0 +1,42 @@
+<!--pages/select/select.wxml-->
+<view class="top">
+  <view class="motd">
+    <view class="title">我的加分项</view>
+    <view class="title2">当前分数：{{score}}分</view>
+  </view>
+  <image class="refresh_icon" src="../../src/refresh.png" mode="cover" bindtap='update'></image>  
+</view>
+
+<scroll-view scroll-y="true">
+  <view class="clickbox" wx:for="{{clicklist}}" wx:for-index="index" wx:for-item="clickitem">
+    <view wx:if="{{clickitem.Status=='通过 Accepted'}}" class="ch1">
+      <view>{{clickitem.ItemScore}} 分</view>
+    </view>
+    <view wx:elif="{{clickitem.Status=='审核中 In review'}}" class="ch2">
+      <view>{{clickitem.ItemScore}} 分</view>
+    </view>
+    <view wx:else class="ch0">
+      <view>{{clickitem.ItemScore}} 分</view>
+    </view>
+    <view class="contcol">
+      <view class="clickword">{{clickitem.ItemName}}</view>
+      <view class="cite">{{clickitem.Status}}</view>
+
+      <view wx:if="{{clickitem.Status=='审核中 In review'}}">
+      <view wx:if="{{!clickitem.recall_ready}}" id="{{index}}" class="recall" bindtap='recall_r'>撤回</view>
+      <view wx:else class="recall_c">
+        确认撤回？
+        <view class='recall_c0' id="{{index}}" bindtap='recall_n'>否</view>
+        <view class='recall_c0' id="{{index}}" data-recall_item="{{clickitem}}" bindtap='recall_y'>是</view>
+      </view>
+      </view>
+
+    </view>
+  </view>
+</scroll-view>
+
+<view class="bottom">
+  <button bindtap='addnew' class="contentbox3" style="flex:1;background-color:#03a9f4;">
+    <text decode='ture'>+添加新项目</text>
+  </button>
+</view>

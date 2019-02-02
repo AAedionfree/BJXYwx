@@ -1,0 +1,22 @@
+{
+  "pages": [
+    "pages/start2/start2",
+    "pages/auth/auth",
+    "pages/authview/authview",
+    "pages/index/index",
+    "pages/setting/setting",
+    "pages/post/post",
+    "pages/list/list",
+    "pages/authed/authed",
+    "pages/jxlist/jxlist",
+    "pages/authindex/authindex",
+    "pages/ranking/ranking",
+    "pages/about/about"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#03a9f4",
+    "navigationBarTitleText": "北京学院学生服务平台",
+    "navigationBarTextStyle": "white"
+  }
+}

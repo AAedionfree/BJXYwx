@@ -1,0 +1,79 @@
+/* pages/ranking/ranking.wxss */
+.top{
+  width: 100%;
+  background: #03a9f4;
+  color: #fff;
+  height: 20%;
+  font-size: 70rpx;
+  font-family: 微软雅黑;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 30rpx;
+}
+
+.clickbox{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 300rpx;
+  border: 10rpx dashed #757575;
+  margin-top: 30rpx;
+  margin-bottom: 25rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  box-shadow: 0rpx 10rpx 15rpx #757575;
+}
+
+.rank{
+  width: 200rpx;
+  height: 300rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-right: 10rpx dashed #bbb;
+  font-size: 80rpx;
+  color: #757575;
+  font-weight: bolder;
+}
+
+.info{
+  margin-left: 30rpx;
+  width: 250rpx;
+}
+
+.namenum{
+  padding-left: 50rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.name{
+  font-size: 50rpx;
+  font-weight: bold;
+}
+
+.num{
+  font-size: 35rpx;
+  color: #757575;
+  margin-top: 20rpx;
+}
+
+.score{
+  display: flex;
+  margin-right: 30rpx;
+  align-items: center;
+  justify-content:center;
+  color: #fff;
+  font-weight: bold;
+  font-size: 40rpx;
+  background: #03a9f4;
+  border: 10rpx solid #5686bf;
+  height: 150rpx;
+  width: 150rpx;
+  border-radius: 100rpx;
+}
+
+.subject{
+  font-size: 40rpx;
+}

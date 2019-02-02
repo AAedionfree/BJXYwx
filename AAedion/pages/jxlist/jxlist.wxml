@@ -1,0 +1,15 @@
+<!--pages/jxlist/jxlist.wxml-->
+<view class="top">奖项列表</view>
+
+<view class="jx">
+  <image class="image" src="../../src/jx/1.png" mode="widthFix" bindtap='view_img'></image>
+  <image class="image" src="../../src/jx/2.png" mode="widthFix" bindtap='view_img'></image>
+  <image class="image" src="../../src/jx/3.png" mode="widthFix" bindtap='view_img'></image>
+  <image class="image" src="../../src/jx/4.png" mode="widthFix" bindtap='view_img'></image>
+  <image class="image" src="../../src/jx/5.png" mode="widthFix" bindtap='view_img'></image>
+  <image class="image" src="../../src/jx/6.png" mode="widthFix" bindtap='view_img'></image>
+  <image class="image" src="../../src/jx/7.png" mode="widthFix" bindtap='view_img'></image>
+  <image class="image" src="../../src/jx/8.png" mode="widthFix" bindtap='view_img'></image>
+  <image class="image" src="../../src/jx/9.png" mode="widthFix" bindtap='view_img'></image>
+  <image class="image" src="../../src/jx/10.png" mode="widthFix" bindtap='view_img'></image>
+</view>

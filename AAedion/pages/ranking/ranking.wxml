@@ -1,0 +1,16 @@
+<!--pages/ranking/ranking.wxml-->
+<view class="top">分数排名</view>
+<scroll-view scroll-y="true">
+  <view  wx:for="{{ranklist}}" wx:for-item="ranklist" >
+    <view class="clickbox" wx:if="{{ranklist.Score!='0'}}">
+      <view class="rank">{{ranklist.rank}}</view>
+      <view class="info">
+        <view class="namenum">
+          <view class="name">{{ranklist.Name}}</view>
+          <view class="num">{{ranklist.StuID}}</view>
+        </view>
+      </view>
+      <view class="score">{{ranklist.Score}}</view>
+    </view>
+  </view>
+</scroll-view>

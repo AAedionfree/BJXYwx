@@ -1,0 +1,42 @@
+<view class="title">
+  <text>北京学院\n学生服务平台</text>
+</view>
+<view>
+  <image class="school_sign" src="/src/logo-final.png" background-size="cover"></image>
+</view>
+
+<view class="input_a">
+  <input value="{{login_username}}" placeholder="输入学号" bindinput='UsernameInput' type="text" maxlength='8' />
+  <input value="{{login_password}}" placeholder="输入密码" bindinput='PasswordInput' type="password" maxlength='12' />
+  <button open-type='getUserInfo' bindgetuserinfo='bindGetUserInfo'>授权</button>
+  <button catchtap='button_login'>登录</button>
+</view>
+
+<!-- Help -->
+<view class="login-help" bindtap="showHelp">
+  <text>帮助</text>
+  <image class="login-help-img" src="../../src/help.png"></image>
+</view>
+
+<view class="help" id="help" wx:if="{{help_status}}" bindtap="tapHelp">
+  <view class="box">
+    <view class="box-hd">
+      <text class="box-title">帮助</text>
+      <image class="box-close" src="../../src/close.png" bindtap="hideHelp"></image>
+    </view>
+    <view class="box-bd">
+      <view class="help-q">1、授权是什么？</view>
+      <view class="help-a">
+        <text>初次登录或注销后需点击授权，来获取微信头像。若已更新头像，需注销后重新登录才可显示新头像。</text>
+      </view>
+      <view class="help-q">2、初始密码是什么？</view>
+      <view class="help-a">
+        <text>初始密码为个人身份证号码最后6位，其中最后一位是x的默认大写</text>
+      </view>
+      <view class="help-q">3、忘记密码？</view>
+      <view class="help-a">
+        <text>请联系管理员</text>
+      </view>
+    </view>
+  </view>
+</view>

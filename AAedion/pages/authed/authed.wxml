@@ -1,0 +1,30 @@
+<!--pages/authed/authed.wxml-->
+<view class="top">
+  已审核列表 
+  <image class="refresh_icon" src="../../src/refresh.png" mode="cover" bindtap='refresh'></image>
+</view>
+
+<view class="switch" bindtap='switch_mode'>
+  <view class="switch1">点击切换为浏览 <text style='font-weight:bold'>{{authtype}}</text> 审核</view>
+</view>
+
+<scroll-view scroll-y="true">
+  <view class="clickbox"  wx:for="{{authlist}}" wx:for-item="authlist" wx:if="{{authlist.Status!=view_mode}}">
+    <view class="info">
+      <view class="namenum">
+        <view class="name">{{authlist.Name}}</view>
+        <view class="num">{{authlist.StuID}}</view>
+      </view>
+      <view class="subject">{{authlist.ItemName}}</view>
+    </view>
+    <view wx:if="{{authlist.Status=='1'}}" class="ch1">
+      <view>{{authlist.ItemScore}} 分</view>
+    </view>
+    <view wx:elif="{{authlist.Status=='2'}}" class="ch2">
+      <view>{{authlist.ItemScore}} 分</view>
+    </view>
+    <view wx:else class="ch0">
+      <view>{{authlist.ItemScore}} 分</view>
+    </view>
+  </view>
+</scroll-view>

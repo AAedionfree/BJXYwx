@@ -1,0 +1,27 @@
+<view class="bottom-white"></view>
+
+<view class="namenum">
+  <view class="name"><text style='color:#757575;'>姓名: </text>{{application.Name}}</view>
+  <view class="num"><text style='color:#757575;'>学号: </text>{{application.StuID}}</view>
+</view>
+
+<view class="detail">
+  <view class="subject"><text style='color:#757575;'>项目代号: </text>{{application.ItemCode}}</view>
+  <view class="subject"><text style='color:#757575;'>项目名称: </text>{{itemContent}}</view>
+  <view class="subject"><text style='color:#757575;'>分数: </text>{{application.ItemScore}}</view>
+  <view class="subject"><text style='color:#757575;'>申请时间: </text>{{application.AppDate}}</view>
+  <view class="subject"><text style='color:#757575;'>申请编号: </text>{{application.AppID}}</view>
+  <view class="subject"><text style='color:#757575;'>备注: </text>{{application.Comment}}</view>
+
+
+  <view wx:if="{{Credential.length}}" class="imgbox" wx:for="{{Credential}}" wx:for-item="Credential1">
+<image wx:if="{{Credential1}}" class="imageshow" src="{{Credential1}}" data-url="{{Credential1}}" mode="widthFix" bindtap='preview_img'></image>
+</view>
+
+  <view class="confirm">
+    <view class='reject' id="{{application.StuID}}" data-code="{{application.ItemCode}}" bindtap='reject'>驳回</view>
+    <view class='accept' id="{{application.StuID}}" data-code="{{application.ItemCode}}" bindtap='accept'>通过</view>
+  </view>
+</view>
+
+<view class="top">审核详情</view>

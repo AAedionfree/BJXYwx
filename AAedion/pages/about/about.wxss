@@ -1,0 +1,65 @@
+/* pages/about/about.wxss */
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #03a9f4;
+  height: 100rpx;
+  width: 100%;
+  color: #fff;
+  font-size: 50rpx;
+}
+
+.main {
+  margin-left: 40rpx;
+  margin-right: 40rpx;
+  display: flex;
+  border-bottom: 10rpx dashed #bbb;
+  padding-top: 30rpx;
+  padding-bottom: 30rpx;
+}
+
+.motd {
+  padding-top: 50rpx;
+  margin-left: 100rpx;
+  margin-right: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100rpx;
+  color: #757575;
+  border-bottom: 5rpx solid #bbb;
+  font-size: 60rpx;
+  font-weight: bold;
+}
+
+.motd2 {
+  padding-top: 40rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  color: #757575;
+  font-size: 30rpx;
+}
+
+.main2 {
+  width: 40%;
+}
+
+.mem {
+  width: 100%;
+  text-align: center;
+}
+
+.class {
+  display: flex;
+  width: 300rpx;
+  color: #757575;
+  align-items: center;
+  justify-content: center;
+  font-size: 70rpx;
+  border-right: 5rpx solid #bbb;
+  margin-right: 30rpx;
+}

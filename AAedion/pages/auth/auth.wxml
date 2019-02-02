@@ -1,0 +1,17 @@
+<view class="top">
+  待审核列表 
+  <image class="refresh_icon" src="../../src/refresh.png" mode="cover" bindtap='refresh'></image>
+</view>
+
+<scroll-view scroll-y="true">
+  <view class="clickbox"  id="{{authlist.StuID}}" data-code="{{authlist.ItemCode}}" wx:for="{{authlist}}" wx:for-item="authlist" bindtap="to_auth">
+    <view class="info">
+      <view class="namenum">
+        <view class="name">{{authlist.Name}}</view>
+        <view class="num">{{authlist.StuID}}</view>
+      </view>
+      <view class="subject">{{authlist.ItemName}}</view>
+    </view>
+    <view class="score">{{authlist.ItemScore}}分</view>
+  </view>
+</scroll-view>
